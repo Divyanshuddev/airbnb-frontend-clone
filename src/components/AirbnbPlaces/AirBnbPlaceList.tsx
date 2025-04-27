@@ -25,7 +25,7 @@ const AirBnbPlaceList = () => {
             return(
                 <Grid size={{lg:3,md:3,sm:12,xs:12}} key={index}>
                     <Suspense fallback={<Loading />}>
-                    <Card data={value} />
+                    <Card id={value.id} image={value.picture_url} name={value.name} price={value.price} maxNights={value.maximum_nights} />
                     </Suspense>
                 </Grid>
             )
