@@ -122,7 +122,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ currentTab }) => {
         setSelectedType('')
     }, [currentTab])
     return (
-        <Stack sx={styles.root} style={{ backgroundColor: selectedType !== '' && ('#EBEBEB'), boxShadow: selectedType !== '' && "none" }}>
+        <Stack sx={styles.root} style={{ backgroundColor: selectedType !== '' ? ('#EBEBEB'):"white", boxShadow: selectedType !== ''? "none": "1px 1px 7px rgba(198, 199, 201, 0.8)" }}>
             <Grid container spacing={0.5}>
                 <Grid size={4} >
                     <Stack sx={selectedType === '' ? styles.searchSection : (selectedType === '1' ? styles.searchSectionSelected : styles.searchSelectionNotSelected)} component={'button'} justifyContent={'center'} alignItems={'flex-start'} paddingLeft={3} onClick={() => { setSelectedType('1'); setOpenDestination(true) }}  >
